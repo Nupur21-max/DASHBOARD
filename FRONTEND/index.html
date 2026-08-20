@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimDashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- navigation bar -->
+    <nav>
+    <!-- dashboard date -->
+        <button id="date_btn" onclick="render_dashboard">Pick a date</button>
+        <input type="date" id="date_picker" min="2026-01-01" max="2026-05-31">
+    </nav>
+
+    <div id="kpiCards">
+        <div id="today">Today Performance</div>
+        <div id="thisMonth">This month till this day</div>
+        <div id="prevMonthSameDay">Previous Month(Same Day)</div>
+        <div id="prevMonth">Previous Month</div>
+    </div>
+
+    <div id="employee"><h3>Daily leaderboard</h3>
+        <table id="metrics-table">
+            <thead>
+            <tr>
+                <th>Sales Rep</th>
+                <th>TDY Sales</th>
+                <th>TDY Revenue</th>
+                <th>MTD Sales</th>
+                <th>MTD Revenue</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- JavaScript will insert rows here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="graphs">
+        <div id="dayRev">
+            <h3>Daywise revenue</h3>
+            <canvas id="daywiseRev"></canvas>
+        </div>
+        <div id="daySales">
+            <h3>Daywise Sales</h3>
+            <canvas id="daywiseSale"></canvas>
+        </div>
+        <div id="month">
+            <h3>Monthwise Summary</h3>
+            <canvas id="monthwise"></canvas>
+        </div>
+        
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js" type="module"></script>
+
+</body>
+</html>
